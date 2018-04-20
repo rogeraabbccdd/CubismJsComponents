@@ -47,7 +47,7 @@ but in the meantime, either link against the [non-permanent official library onl
 
 ## Contributing
 
-There are many ways to contribute to the project: logging bugs, submitting pull requests, reporting issues, and creating suggestions.
+There are many ways to contribute to the project: logging bugs, submitting pull requests on this GitHub, and reporting issues and making suggestions at Live2D Community.
 
 While any form of contributing is greatly appreciated, *suggestions regarding design and API are especially important to us*.
 
