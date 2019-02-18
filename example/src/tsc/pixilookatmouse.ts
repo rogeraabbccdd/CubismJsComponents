@@ -24,7 +24,7 @@ PIXI.loader
 
 
         // Load moc.
-        let moc = LIVE2DCUBISMCORE.Moc.fromArrayBuffer(resources['moc'].data);
+        let moc = Live2DCubismCore.Moc.fromArrayBuffer(resources['moc'].data);
 
 
         // Create model.

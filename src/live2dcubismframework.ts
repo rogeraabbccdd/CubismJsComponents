@@ -303,7 +303,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * @param target Target.
          */
         public evaluate(time: number, weight: number, blend: IAnimationBlender,
-            target: LIVE2DCUBISMCORE.Model, stackFlags:any, groups: Groups = null): void {
+            target: Live2DCubismCore.Model, stackFlags:any, groups: Groups = null): void {
             // Return early if influence is miminal.
             if (weight <= 0.01) {
                 return;
@@ -711,7 +711,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @param target Target.
          */
-        public _evaluate(target: LIVE2DCUBISMCORE.Model, stackFlags: any): void {
+        public _evaluate(target: Live2DCubismCore.Model, stackFlags: any): void {
             // Return if evaluation isn't possible.
             if (this._animation == null) {
                 return;
@@ -755,7 +755,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
     /** Cubism animator. */
     export class Animator {
         /** Target model. */
-        public get target(): LIVE2DCUBISMCORE.Model {
+        public get target(): Live2DCubismCore.Model {
             return this._target;
         }
 
@@ -841,7 +841,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @return Animator on success; 'null' otherwise.
          */
-        public static _create(target: LIVE2DCUBISMCORE.Model, timeScale: number, layers: Map<string, AnimationLayer>): Animator {
+        public static _create(target: Live2DCubismCore.Model, timeScale: number, layers: Map<string, AnimationLayer>): Animator {
             let animator = new Animator(target, timeScale,layers);
 
 
@@ -852,7 +852,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
 
 
         /** Target. */
-        private _target: LIVE2DCUBISMCORE.Model;
+        private _target: Live2DCubismCore.Model;
 
         /** Layers. */
         private _layers: Map<string, AnimationLayer>;
@@ -870,7 +870,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * @param timeScale Time scale.
          * @param layers Layers.
          */
-        private constructor(target: LIVE2DCUBISMCORE.Model, timeScale: number, layers: Map<string, AnimationLayer>) {
+        private constructor(target: Live2DCubismCore.Model, timeScale: number, layers: Map<string, AnimationLayer>) {
             this._target = target;
             this.timeScale = timeScale;
             this._layers = layers;
@@ -887,7 +887,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @return Builder.
          */
-        public setTarget(value: LIVE2DCUBISMCORE.Model): AnimatorBuilder {
+        public setTarget(value: Live2DCubismCore.Model): AnimatorBuilder {
             this._target = value;
 
 
@@ -962,7 +962,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
 
 
         /** Target. */
-        private _target: LIVE2DCUBISMCORE.Model;
+        private _target: Live2DCubismCore.Model;
 
         /** Time scale. */
         private _timeScale: number = 1;
@@ -1534,7 +1534,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @param deltaTime Delta time.
          */
-        public _update(deltaTime: number, target: LIVE2DCUBISMCORE.Model) {
+        public _update(deltaTime: number, target: Live2DCubismCore.Model) {
             let parameters = target.parameters;
 
 
@@ -1645,7 +1645,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @param target Target.
          */
-        public _evaluate(target: LIVE2DCUBISMCORE.Model) {
+        public _evaluate(target: Live2DCubismCore.Model) {
             let parameters = target.parameters;
 
 
@@ -1709,7 +1709,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @return Rig on success; [[null]] otherwise.
          */
-        public static _fromPhysics3Json(target: LIVE2DCUBISMCORE.Model, timeScale: number, physics3Json: any) {
+        public static _fromPhysics3Json(target: Live2DCubismCore.Model, timeScale: number, physics3Json: any) {
             let rig = new PhysicsRig(target, timeScale, physics3Json);
 
 
@@ -1720,7 +1720,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
 
 
         /** Target model. */
-        private _target: LIVE2DCUBISMCORE.Model;
+        private _target: Live2DCubismCore.Model;
 
         /** Sub rigs. */
         private _subRigs: Array<PhysicsSubRig>;
@@ -1736,7 +1736,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @param physics3Json Physics descriptor.
          */
-        private constructor(target: LIVE2DCUBISMCORE.Model, timeScale: number, physics3Json: any) {
+        private constructor(target: Live2DCubismCore.Model, timeScale: number, physics3Json: any) {
             // Store arguments.
             this.timeScale = timeScale;
             this._target = target;
@@ -1814,7 +1814,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @return Builder.
          */
-        public setTarget(value: LIVE2DCUBISMCORE.Model): PhysicsRigBuilder {
+        public setTarget(value: Live2DCubismCore.Model): PhysicsRigBuilder {
             this._target = value;
 
 
@@ -1864,7 +1864,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
 
 
         /** Target. */
-        private _target: LIVE2DCUBISMCORE.Model;
+        private _target: Live2DCubismCore.Model;
 
         /** Time scale. */
         private _timeScale: number = 1;
@@ -1882,7 +1882,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
     export class UserData {
 
         /** Set the userdata3.json formated file to JSON Parser */
-        public static _fromUserData3Json(target: LIVE2DCUBISMCORE.Model, userData3Json: any): UserData {
+        public static _fromUserData3Json(target: Live2DCubismCore.Model, userData3Json: any): UserData {
 
             let userdata = new UserData(target, userData3Json);
             
@@ -1967,7 +1967,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
 
 
         /** Target model. */
-        private _target: LIVE2DCUBISMCORE.Model;
+        private _target: Live2DCubismCore.Model;
 
         /** Version of JSON file format. */
         private _version: number;
@@ -1981,7 +1981,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
         /** Main structure of user data. */
         private _userDataBodys: Array<UserDataBody>;
 
-        private constructor(target: LIVE2DCUBISMCORE.Model, userData3Json: any) {
+        private constructor(target: Live2DCubismCore.Model, userData3Json: any) {
             // Store arguments.
             this._target = target;
 
@@ -2023,7 +2023,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
          * 
          * @return Builder.
          */
-        public setTarget(value: LIVE2DCUBISMCORE.Model): UserDataBuilder {
+        public setTarget(value: Live2DCubismCore.Model): UserDataBuilder {
             this._target = value;
             return this;
         }
@@ -2046,7 +2046,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
         }
 
         /** Target Model. */
-        private _target: LIVE2DCUBISMCORE.Model;
+        private _target: Live2DCubismCore.Model;
 
         /** UserData JSON object. */
         private _userData3Json: any;
@@ -2077,7 +2077,7 @@ namespace LIVE2DCUBISMFRAMEWORK {
     export class Groups {
 
         /** Target model. */
-        // private _target: LIVE2DCUBISMCORE.Model;
+        // private _target: Live2DCubismCore.Model;
         
         /** Main structure of groups. */
         private _groupBodys: Array<GroupBody>;
