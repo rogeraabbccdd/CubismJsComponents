@@ -11,7 +11,7 @@ var pixilookatmouse;
         .load(function (loader, resources) {
         var app = new PIXI.Application(1280, 720, { backgroundColor: 0x1099bb });
         document.body.appendChild(app.view);
-        var moc = LIVE2DCUBISMCORE.Moc.fromArrayBuffer(resources['moc'].data);
+        var moc = Live2DCubismCore.Moc.fromArrayBuffer(resources['moc'].data);
         var model = new LIVE2DCUBISMPIXI.ModelBuilder()
             .setMoc(moc)
             .setTimeScale(1)

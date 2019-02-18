@@ -17,7 +17,7 @@ var pixilipsync;
         webAudio.setAudio(2, "../assets/haru/audios/haru_normal_03.mp3");
         webAudio.setAudio(3, "../assets/haru/audios/haru_normal_04.mp3");
         webAudio.setAudio(4, "../assets/haru/audios/haru_normal_05.mp3");
-        var moc = LIVE2DCUBISMCORE.Moc.fromArrayBuffer(resources['moc'].data);
+        var moc = Live2DCubismCore.Moc.fromArrayBuffer(resources['moc'].data);
         var model = new LIVE2DCUBISMPIXI.ModelBuilder()
             .setMoc(moc)
             .setTimeScale(1)
